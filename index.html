@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroTea Project</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/ynj6fep.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="hero-slideshow">
+      <img src="bg1.webp" class="bg-slide active" alt="">
+      <img src="bg2.webp" class="bg-slide" alt="">
+      <img src="bg3.webp" class="bg-slide" alt="">
+    </div>
+
+  <header>
+    <div class="nav-left">
+      <h2>blends</h2>
+      <h2>ingredients</h2>
+    </div>
+
+
+
+  </header>
+
+  <div id="hero">
+
+    <div id="hero-outline-sketch"></div>
+    <div id="hero-dark-overlay"></div>
+
+    <div class="logo-row">
+      <img src="s.png" class="letter" id="letter-s" alt="S">
+      <div id="sketch-container"></div>
+      <img src="m.png" class="letter" id="letter-m" alt="M">
+      <img src="a.png" class="letter" id="letter-a" alt="A">
+    </div>
+  </div>
+
+  <div class="overlap-content">
+
+    <div class="gradient-flow">
+      <section id="mockups-section" class="overlap-panel">
+        <img src="blends-outline.svg" class="mockup-title-img" alt="blends">
+
+          <div class="mockup-grid">
+            <div class="mockup-card">
+              <img src="Tea1.png" alt="Tea Mockup 1">
+            </div>
+
+            <div class="mockup-card">
+              <img src="Tea2.png" alt="Tea Mockup 2">
+            </div>
+
+            <div class="mockup-card">
+              <img src="Tea3.png" alt="Tea Mockup 3">
+            </div>
+          </div>
+      </section>
+
+      <section id="blends-section" class="overlap-panel">
+        <img src="mechanisms-outline.svg" class="viz-title-img" alt="energy">
+        <div>
+        </div>
+
+
+  <div class="blend-slider-shell">
+    <button class="blend-arrow" id="blend-prev" aria-label="Previous blend">←</button>
+
+    <div class="blend-stage">
+      <div class="blend-slide is-active">
+        <div class="blend-shape blend-trigger" data-blend="focus">
+          <div class="blend-info">
+            <img src="focus-outline.svg" class="blend-title-img" alt="focus">
+            <p>
+              Green tea, rosemary, and ginkgo create a clear, attentive blend
+              designed for steadier concentration and sustained mental work.
+            </p>
+
+            <div class="ingredient-meta">l-theanine</div>
+            <div class="ingredient-visual" id="viz-theanine"></div>
+            <div class="blend-open-hint">click to explore mechanism</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="blend-slide is-right">
+        <div class="blend-shape blend-trigger" data-blend="relaxation">
+          <div class="blend-info">
+            <img src="relaxation-outline.svg" class="blend-title-img" alt="relaxation">
+            <p>
+              Chamomile, valerian root, and lemon balm are combined to soften
+              mental tension and support a slower transition into rest.
+            </p>
+
+            <div class="ingredient-meta">apigenin</div>
+            <div class="ingredient-visual" id="viz-apigenin"></div>
+            <div class="blend-open-hint">click to explore mechanism</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="blend-slide is-hidden">
+        <div class="blend-shape blend-trigger" data-blend="energy">
+          <div class="blend-info">
+            <img src="energy-outline.svg" class="blend-title-img" alt="energy">
+            <p>
+              Black tea, ginger, and peppermint build a brighter, more activating
+              blend intended to support alertness, circulation, and mental lift.
+            </p>
+
+            <div class="ingredient-meta">caffeine</div>
+            <div class="ingredient-visual" id="viz-caffeine"></div>
+            <div class="blend-open-hint">click to explore mechanism</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+         <button class="blend-arrow" id="blend-next" aria-label="Next blend">→</button>
+
+      </section>
+    </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <img src="soma-logo.png" alt="Soma logo" class="footer-logo">
+              <p class="footer-brand-copy">
+                Blends rooted in neuroscience. Crafted to make the mechanisms behind tea
+                feel tangible, visual, and easier to understand.
+              </p>
+            </div>
+
+            <div class="footer-links">
+              <div class="footer-column">
+                <h4>Explore</h4>
+                <a href="#hero">Home</a>
+                <a href="#mockups-section">Blends</a>
+                <a href="#blends-section">Mechanisms</a>
+              </div>
+
+              <div class="footer-column">
+                <h4>About</h4>
+                <a href="#">Process</a>
+                <a href="#">Research</a>
+                <a href="#">Ingredients</a>
+              </div>
+
+              <div class="footer-column">
+                <h4>Contact</h4>
+                <a href="mailto:hello@soma.com">hello@soma.com</a>
+                <p class="footer-note">Concept website / design thesis project</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© 2026 Soma. All rights reserved.</p>
+            <div class="footer-bottom-links">
+              <a href="#">Privacy</a>
+              <a href="#">Instagram</a>
+              <a href="#">Email</a>
+            </div>
+          </div>
+        </div>
+      </footer> 
+  </div>
+
+<!-- EXPANDED MECHANISM MODAL -->
+<div id="blend-modal" class="blend-modal" aria-hidden="true">
+  <div class="blend-modal-backdrop"></div>
+
+  <div class="blend-modal-panel">
+    <button class="blend-modal-close" id="modal-close-btn" aria-label="Close">×</button>
+   
+
+    <div class="blend-modal-copy">
+      <div class="blend-modal-kicker" id="modal-kicker">main active</div>
+      <h2 id="modal-title">relaxation</h2>
+      <p id="modal-description">
+        Chamomile-derived apigenin is visualized here as a slowing and softening
+        of signaling, creating a calmer neural atmosphere.
+      </p>
+    </div>
+
+        <!-- VISUAL -->
+    <div class="blend-modal-canvas-wrap">
+      <div class="blend-modal-controls-top blend-modal-controls-inside">
+        <div id="modal-dots" class="blend-modal-dots"></div>
+        <div id="modal-stage-label" class="blend-modal-stage-label"></div>
+      </div>
+
+      <div id="modal-canvas-container"></div>
+    </div>
+</div>
+  </div>
+</div>
+
+<div class="color-picker-wrap">
+  <label for="relaxation-color">Relaxation color</label>
+  <input type="color" id="relaxation-color" value="#f5c85c">
+
+  <label for="focus-color">focus color</label>
+  <input type="color" id="focus-color" value="#b7c8b1">
+
+  <label for="energy-color">Energy color</label>
+  <input type="color" id="energy-color" value="#ff8c3c">
+</div>
+
+</div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="sketch.js"></script>
+
+ 
+</body>
+
+
+
+</html>
